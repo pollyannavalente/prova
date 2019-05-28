@@ -43,7 +43,7 @@ main p {
     text-align: center;
    /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
     text-decoration: none;
-    transition: .5s;
+  /*  transition: .5s;*/
 }
 
 
@@ -198,6 +198,7 @@ body {
     /*Para adicionar uma animação à lista de palavras, começamos usando a propriedade animation na lista com a classe palavra-home, na qual definimos o nome da animação que vamos criar (pode ser qualquer nome) e o tempo que ela vai levar para executar:*/
     -webkit-animation: aparece 2s;
     animation: aparece 2s;
+    text-align: center;
     
 }   
 
@@ -216,16 +217,17 @@ body {
     -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
 }
-.artificial-intelligence {
-    top: 15%;
-    left: 20%;
-    opacity: .8;
-    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
-            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
-}
+
 .clean-code {
     top: 80%;
     left: 30%;
+     opacity: .4;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+}
+.design {
+    top: 40%;
+    left: 90%;
      opacity: .4;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
@@ -235,6 +237,13 @@ body {
     left: 20%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+}
+.artificial-intelligence {
+    top: 15%;
+    left: 20%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
 }
 .machine-learning {
     top: 10%;
@@ -255,4 +264,12 @@ body {
     left: 70%;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+}
+
+
+.labs{
+    font-family: "Shadows Into Light", cursive;
+    font-weight: inherit;
+    font-size: 120%;
+   
 }
