@@ -59,10 +59,12 @@ main p {
 .trabalhos img {
     width: 100%;
     display: block;
-}
+     border: .1em solid #000;
+   /* position: static;*/
+    }
 
 .trabalhos li:first-child {
-    order: 2;
+    /*order: 2;*/
     transform: scale(1.2);
 }
 
@@ -71,18 +73,17 @@ main p {
     /*Com isso, agora podemos usar nos elementos da lista a propriedade flex, para garantir que eles cresçam e diminuam automaticamente de acordo com o tamanho da lista e com o número de itens: */
     flex: 1;
     
-    /*
+    
     float: left;
     width: 33.333%;
-    */
-    border: .1em solid #000;
+   
 }
 
 .trabalhos h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     color: #FFF;
     text-align: center;
-     text-shadow: 2px 2px #000;
+    text-shadow: 2px 2px #000;
 }
 .secao-inicial h2 {
     font-size: 3em;
@@ -110,7 +111,7 @@ main p {
     text-align: center;
    /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
     text-decoration: none;
-    transition: .5s;
+   /* transition: .5s;*/
 }
 
 
@@ -262,6 +263,7 @@ body {
 .design-thinking {
     top: 55%;
     left: 70%;
+    white-space: nowrap;
     -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
             transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
 }
@@ -273,3 +275,10 @@ body {
     font-size: 120%;
    
 }
+
+
+#vertentes img {
+    width: 100%;
+    display: block;
+}
+    
