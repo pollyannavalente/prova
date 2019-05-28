@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Compasso - Prova - Inscrição</title>
+    <link rel="icon" href="projeto/img/favicon.jpg">
+    <link rel="stylesheet" href="projeto/css/reset.css">
+    <link rel="stylesheet" href="projeto/css/site.css">
+    <link rel="stylesheet" href="projeto/css/inscricao.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Source+Sans+Pro&display=swap">
+</head>
+
+<body>
+    <main>
+        <h1 class="titulo-principal">inscreva-se</h1>
+        <div class="container">
+            <form>
+                <h2>Faça parte desse time se inscrevendo na próxima edição do programa de bolsas.</h2>
+                
+                <fieldset>   
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']{4,}"
+                        title="O nome precisa ter pelo menos 4 caracteres">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" required placeholder="seu@email.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Maior Disponibilidade</legend>
+                    <label>
+                        <input type="radio" name="disponibilidade" value="manha">
+                        manhã
+                    </label>
+                    <label>
+                        <input type="radio" name="disponibilidade" value="tarde">
+                        tarde
+                    </label>
+                    <label>
+                        <input type="radio" name="disponibilidade" value="Noite">
+                        noite
+                    </label>
+                    <label>
+                        <input type="radio" name="disponibilidade" value="personalizar">
+                        personalizar
+                        <input type="text" name="disponibilidade" >
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses</legend>
+                    <label>
+                        <input type="checkbox" name="interesse" value="ia">
+                        IA
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interesse" value="big-data">
+                        Big Data
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interesse" value="machine-learning">
+                        Machine Learning
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interese" value="outro">
+                        Outro
+                        <input type="text" name="interese">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="mensagem">Por que você quer participar?</label>
+                    <textarea id="mensagem" name="mensagem" cols="60" rows="10"
+                        placeholder="Digite aqui sua mensagem"></textarea>
+                    <button type="submit">Enviar mensagem</button>
+                </fieldset>
+        
+            </form>
+        </div>
+    </main>
+
+    <footer class="rodape-pagina">
+        <h2>Compasso Tecnologia LTDA.</h2>
+        <ul class="rodape-links">
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

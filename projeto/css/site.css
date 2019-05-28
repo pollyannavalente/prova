@@ -1,0 +1,101 @@
+body {
+    font-family: "Crimson Text", "Times New Roman", serif;
+    background-color: #F2FFFC;
+    font-size: 100%;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+.subtitulo-principal {
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-shadow: 1.5px 1.5px #000;
+}
+
+.titulo-principal {
+    text-align: center;
+    background-color: #2f3783;
+    color: #FFF;
+    padding: 1rem;
+
+}
+
+.subtitulo-texto {
+    font-size: 1.5em;
+    clear: both;
+}
+
+main a {
+    color: #2f3783;
+}
+
+main a:hover,
+main a:focus,
+footer a:focus,
+
+footer a:hover {
+    color: #2f3783;;
+}
+
+main p {
+    text-align: justify;
+    margin: 1em 0;
+}
+
+
+.rodape-pagina {
+    color: #F2FFFC;
+    padding: 1em;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+ 
+    
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-color: #000; 
+ 
+    background-size: 25% 100%;
+}
+
+.container {
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+main {
+    padding-bottom: 4em;
+    flex-grow: 1;
+}
+
+.rodape-links{
+    font-size: 0.80em;
+    
+}
+
+footer a{
+    color: #686868;
+}
+footer h2{
+    font-size: 1.5em;
+}
