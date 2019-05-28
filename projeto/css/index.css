@@ -153,10 +153,18 @@ footer h2{
 
 .botao-index:focus,
 .botao-index:hover {
-    background-color: #C54974;
-    color: white;
-    box-shadow: 0 0 1em #FA9;
+    background-color: #FFF;
+    color: black;
+    box-shadow: 0 0 1em #2f3783;
 }
+
+.trabalho-vertente:focus,
+.trabalho-vertente:hover {
+    background-color: #2f3783;
+    color: WHITE;
+    box-shadow: 0 0 1em #FFF;
+}
+
 
 /*Para que esses efeitos apareçam suavemente (em meio segundo), adicionamos à classe botao-index a propriedade transition. Adicionamos também a ela a declaração para tirar o sublinhado dos botões:*/
 
