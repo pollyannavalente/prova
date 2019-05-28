@@ -1,0 +1,96 @@
+.titulo-principal {
+    text-align: center;
+    background-color: #2f3783;
+    color: #FFF;
+    padding: 4rem;
+    /*border-bottom: .5rem solid #000;*/
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.principal {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+    font-family:"OCR A Std", monospace;
+}
+
+.texto-inicial p {
+    font-size: 1.5em;
+    color: #99A;
+    line-height: 1;
+    padding: 2em;
+}
+
+main p {
+    text-align: justify;
+    margin: 1em 0;
+}
+
+.secao-inicial {
+    padding: 2em;
+}
+
+.botao-index {
+    font-size: 1.25em;
+    background-color: #2f3783;
+    color: #FFF;
+    padding: .5em;
+    border: .01em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+   /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.trabalhos {
+    background-color: #2f3783;
+    border-top: .01em solid #000;
+    border-bottom: .01em solid #000;
+ /*   background-image: linear-gradient(135deg, transparent, transparent 14px, rgba(0,0,0,.1) 14px, rgba(0,0,0,.1) 15px, transparent 15px, transparent); /*faz os ricos transversais*/
+    background-attachment: fixed;
+    background-size: 20px 20px;   
+}
+
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.trabalhos h2 {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    color: #FFF;
+    text-align: center;
+     text-shadow: 2px 2px #000;
+}
+.secao-inicial h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+
+.trabalhos ul{
+    display: flex;
+    list-style: none;
+}
+
+
+
+
+.trabalho-vertente {
+    font-size: 1.25em;
+    background-color: #FFF;
+    color: #2f3783;
+    padding: .5em;
+    border: .01em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+   /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
+    text-decoration: none;
+    transition: .5s;
+}
