@@ -2,7 +2,7 @@
     text-align: center;
     background-color: #2f3783;
     color: #FFF;
-    padding: 4rem;
+    padding: 7rem;
     /*border-bottom: .5rem solid #000;*/
     transform-style: preserve-3d;
     position: relative;
@@ -174,4 +174,85 @@ footer h2{
 body {
     /* sobrescreve o site.css */
     display: block;
+}
+
+
+
+
+.palavras-home {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+}
+
+.palavra-home {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: bold;
+    font-size: 550%;
+    color: #58ACFA;
+    position: absolute;
+    /*Para adicionar uma animação à lista de palavras, começamos usando a propriedade animation na lista com a classe palavra-home, na qual definimos o nome da animação que vamos criar (pode ser qualquer nome) e o tempo que ela vai levar para executar:*/
+    -webkit-animation: aparece 2s;
+    animation: aparece 2s;
+    
+}   
+
+
+.iot {
+    top: 50%;
+    left: 10%;
+    opacity: .8; /*define a opacidade do elemento 0 eh invisivel 1 totalmente visivel*/
+    -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+}
+.digital {
+    top: 85%;
+    left: 45%;
+    opacity: .7; /*define a opacidade do elemento 0 eh invisivel 1 totalmente visivel*/
+    -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+}
+.artificial-intelligence {
+    top: 15%;
+    left: 20%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+}
+.clean-code {
+    top: 80%;
+    left: 30%;
+     opacity: .4;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+}
+.blockchain {
+    top: 65%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+}
+.machine-learning {
+    top: 10%;
+    left: 50%;
+    opacity: .6;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+}
+.agile {
+    top: 20%;
+    left: 80%;
+    opacity: .2;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(0deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(0deg) scale(.25);
+}
+.design-thinking {
+    top: 55%;
+    left: 70%;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
 }
