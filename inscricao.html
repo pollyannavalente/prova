@@ -16,56 +16,56 @@
     <main>
         <h1 class="titulo-principal">inscreva-se</h1>
         <div class="container">
-            <form>
+            <form id="formulario">
                 <h2>Faça parte desse time se inscrevendo na próxima edição do programa de bolsas.</h2>
                 
                 <fieldset>   
                     <label for="nome">Nome completo</label>
-                    <input id="nome" type="text" name="nome" required autofocus pattern="[A-Za-z ']{4,}"
-                        title="O nome precisa ter pelo menos 4 caracteres">
+                    <input id="nome" type="text" name="nome" autofocus
+                        title="Somente letras no campo e no minimo 2" >
                     <label for="email">E-mail</label>
-                    <input id="email" type="email" name="email" required placeholder="seu@email.com">
+                    <input id="email" type="email" name="email" placeholder="seu@email.com">
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="campo-disponibilidade">
                     <legend>Maior Disponibilidade</legend>
                     <label>
-                        <input type="radio" name="disponibilidade" value="manha">
+                        <input id="rbmanha" type="radio" name="disponibilidade" value="manha">
                         manhã
                     </label>
                     <label>
-                        <input type="radio" name="disponibilidade" value="tarde">
+                        <input id="rbtarde" type="radio" name="disponibilidade" value="tarde">
                         tarde
                     </label>
                     <label>
-                        <input type="radio" name="disponibilidade" value="Noite">
+                        <input id="rbnoite" type="radio" name="disponibilidade" value="Noite">
                         noite
                     </label>
                     <label>
-                        <input type="radio" name="disponibilidade" value="personalizar">
+                        <input id="rbperso" type="radio" name="disponibilidade" value="personalizar" >
                         personalizar
-                        <input type="text" name="disponibilidade" >
+                        <input type="text" name="disponibilidade" id="perso" disabled="true">
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Interesses</legend>
                     <label>
-                        <input type="checkbox" name="interesse" value="ia">
+                        <input id="ckia" type="checkbox" name="interesse" value="ia">
                         IA
                     </label>
                     <label>
-                        <input type="checkbox" name="interesse" value="big-data">
+                        <input id="ckbig" type="checkbox" name="interesse" value="big-data">
                         Big Data
                     </label>
                     <label>
-                        <input type="checkbox" name="interesse" value="machine-learning">
+                        <input id="ckmachine" type="checkbox" name="interesse" value="machine-learning">
                         Machine Learning
                     </label>
                     <label>
-                        <input type="checkbox" name="interese" value="outro">
+                        <input id="ckoutro" type="checkbox" name="interese" value="outro">
                         Outro
-                        <input type="text" name="interese">
+                        <input id="outro" type="text" name="interese" disabled="true">
                     </label>
                 </fieldset>
                 <fieldset>
@@ -87,6 +87,7 @@
             <li><a href="#">Link</a></li>
         </ul>
     </footer>
+    <script src="projeto/js/inscricao.js"></script>
 </body>
 
 </html>

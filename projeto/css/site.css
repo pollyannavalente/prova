@@ -66,6 +66,7 @@ main p {
     background-color: #000; 
  
     background-size: 25% 100%;
+    position: relative;
 }
 
 .container {
