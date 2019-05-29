@@ -1,0 +1,55 @@
+
+.principal {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+    font-family:"OCR A Std", monospace;
+}
+
+.titulo-principal {
+    text-align: right;
+    background-color: #2f3783;
+    color: #FFF;
+    padding: 3rem;
+    /*border-bottom: .5rem solid #000;*/
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+.rodape-links{
+    font-size: 0.80em;
+    
+}
+
+footer a{
+    color: #686868;
+}
+footer h2{
+    font-size: 1.5em;
+}
+
+.rodape-pagina {
+    color: #F2FFFC;
+    padding: 1em;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+ 
+    
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-color: #000; 
+ 
+    background-size: 25% 100%;
+    position: relative;
+}
+
+.rodape-links{
+    font-size: 0.80em;
+    
+}
+
