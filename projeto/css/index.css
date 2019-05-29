@@ -59,12 +59,25 @@ main p {
     width: 100%;
     display: block;
      border: .1em solid #000;
+    
    /* position: static;*/
     }
+
+.trabalhos img:focus,
+.trabalhos img:hover {
+    background-color: #2f3783;
+    color: WHITE;
+    box-shadow: 0 0 1em #FFF;
+    border: .1em solid cornflowerblue;
+}
 
 .img-ml {
     order: 1;
     transform: scale(1);
+    box-sizing: border-box;
+    position: relative;
+
+
     
 }
 .img-dt {
@@ -288,4 +301,7 @@ body {
     width: 100%;
     display: block;
 }
+
+
+
     
