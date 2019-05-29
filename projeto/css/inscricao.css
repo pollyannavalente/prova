@@ -69,10 +69,32 @@ fieldset{
 .popup{
     width: 400px;
     height: 100px;
-    background: #f00;
-    position: relative;
+    background: #e6e6e6;
+    position: fixed;
     z-index: 100;
     top: 40%;
-    left: 35%;
-    
+    left: 35%; 
+}
+
+.apos-popup{
+    opacity: 0.5; 
+}
+
+.paragrafo-popup{
+    position: absolute;
+    margin:10px;
+}
+
+.link-popup{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.redir-popup{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 358px;
+    margin-bottom: 0px;
 }

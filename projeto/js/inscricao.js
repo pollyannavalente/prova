@@ -133,19 +133,40 @@ form.addEventListener("submit", function (event) {
     checkNome();
     chekMensagem();
 
-    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form")||
-    verificaRadio() == false || verificaCheckBox() == false) {
-        document.querySelector("#popup").classList.add("popup");
-        return 
+    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form") ||
+        verificaRadio() == false || verificaCheckBox() == false) {
+        return
     }
-
     let enviar = criarJSON(form);
-    document.querySelector("#popup").classList.add("popup");
+    insereDiv();
     console.log(enviar);
-
-
-
 });
+
+function insereDiv(){
+    let main = document.querySelector("#main");
+    main.classList.add("apos-popup");
+    let insc = "fazer outra inscrição";
+    let cancelar = "sair";
+    let parag = "Inscrição enviada. Aguarde novos detalhes em seu e-mail " + email.value; 
+    let div = document.querySelector("#popup");
+    div.classList.add("popup");
+    div.appendChild(criarParagrafo(parag));
+    div.appendChild(criarLink(insc,"link-popup","inscricao.html"));
+    div.appendChild(criarLink(cancelar,"redir-popup","index.html"));
+}
+function criarParagrafo(dado){
+    let p = document.createElement("p");
+    p.classList.add("paragrafo-popup");
+    p.textContent = dado;
+    return p;
+}
+function criarLink(dado,classe,ref) {
+    let link = document.createElement("a")
+    link.setAttribute("href",ref);
+    link.classList.add(classe);
+    link.textContent = dado;
+    return link;
+}
 
 function criarJSON(form) {
 
@@ -201,6 +222,6 @@ function criarJSON(form) {
         mensagem: form.mensagem.value
     }
 
-    
+
     return inscrito;
 }
