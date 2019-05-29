@@ -26,21 +26,24 @@ mensagem.addEventListener("input", function () {
 });
 
 
-
-
 rbPerso.addEventListener("click", function () {
     txtPer.removeAttribute("disabled");
     txtPer.focus();
+
 });
 rbManha.addEventListener("click", function () {
     txtPer.setAttribute("disabled", true);
+
 });
 rbTarde.addEventListener("click", function () {
     txtPer.setAttribute("disabled", true);
+
 });
 rbNoite.addEventListener("click", function () {
     txtPer.setAttribute("disabled", true);
+
 });
+
 
 ckOutro.addEventListener("click", function () {
     if (txtOutro.hasAttribute("disabled")) {
@@ -50,7 +53,6 @@ ckOutro.addEventListener("click", function () {
         txtOutro.setAttribute("disabled", true);
     }
 });
-
 
 
 
@@ -68,8 +70,6 @@ function verificaCheckBox() {
         return false;
     }
 }
-
-console.log(rbManha.checked)
 
 function chekMensagem() {
     if (mensagem.value.length > 140) {
@@ -133,14 +133,109 @@ form.addEventListener("submit", function (event) {
     checkNome();
     chekMensagem();
 
+    let span = document.querySelector("span-msg");
 
+    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form")) {
 
-    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form") ||
-        verificaRadio() == false || verificaCheckBox() == false) {
-        return alert("Campos obrigatórios faltando");
+        if (verificaRadio() == false || verificaCheckBox() == false) {
+            return span.textContent = "Por Favor preencha os campos em vermelho e selecione ao menos uma disponibilidade e um interesse";
+        }
+        return span.textContent = "Por Favor preencha os campos em vermelho";
     }
 
-    alert("ok");
+    let enviar = criarJSON(form);
+    console.log(enviar);
 
 
 });
+
+
+function validaForm(paciente) {
+
+    var erros = [];
+
+    if (paciente.nome.length == 0) {
+        erros.push("O nome não pode ser em branco");
+    }
+
+    if (paciente.gordura.length == 0) {
+        erros.push("A gordura não pode ser em branco");
+    }
+
+    if (paciente.peso.length == 0) {
+        erros.push("O peso não pode ser em branco");
+    }
+
+    if (paciente.altura.length == 0) {
+        erros.push("A altura não pode ser em branco");
+    }
+
+    if (!validaPeso(paciente.peso)) {
+        erros.push("Peso é inválido");
+    }
+
+    if (!validaAltura(paciente.altura)) {
+        erros.push("Altura é inválida");
+    }
+
+    return erros;
+}
+
+
+function criarJSON(form) {
+
+    let inter = "";
+    let disp = "";
+    if (ckOutro.checked) {
+        if (inter == "") {
+            inter = txtOutro.value
+        } else {
+            inter = inter + "," + txtOutro.value
+        }
+    }
+    if (ckMachine.checked) {
+        if (inter == "") {
+            inter = ckMachine.value
+        } else {
+            inter = inter + "," + ckMachine.value
+        }
+    }
+    if (ckBig.checked) {
+        if (inter == "") {
+            inter = ckBig.value
+        } else {
+            inter = inter + "," + ckBig.value
+        }
+    }
+    if (ckIa.checked) {
+        if (inter == "") {
+            inter = ckIa.value
+        } else {
+            inter = inter + "," + ckIa.value
+        }
+    }
+
+    if (rbManha.checked) {
+        disp = rbManha.value
+    }
+    if (rbTarde.checked) {
+        disp = rbTarde.value
+    }
+    if (rbNoite.checked) {
+        disp = rbNoite.value
+    }
+    if (rbPerso.checked) {
+        disp = txtPer.value
+    }
+
+    var inscrito = {
+        nome: form.nome.value,
+        email: form.email.value,
+        disponibilidade: disp,
+        interesse: inter,
+        mensagem: form.mensagem.value
+    }
+
+    
+    return inscrito;
+}
