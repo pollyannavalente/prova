@@ -65,3 +65,14 @@ fieldset{
 .aceito-form{
     border: 2px solid green;
 }
+
+.popup{
+    width: 400px;
+    height: 100px;
+    background: #f00;
+    position: relative;
+    z-index: 100;
+    top: 40%;
+    left: 35%;
+    
+}

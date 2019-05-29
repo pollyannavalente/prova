@@ -133,54 +133,19 @@ form.addEventListener("submit", function (event) {
     checkNome();
     chekMensagem();
 
-    let span = document.querySelector("span-msg");
-
-    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form")) {
-
-        if (verificaRadio() == false || verificaCheckBox() == false) {
-            return span.textContent = "Por Favor preencha os campos em vermelho e selecione ao menos uma disponibilidade e um interesse";
-        }
-        return span.textContent = "Por Favor preencha os campos em vermelho";
+    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form")||
+    verificaRadio() == false || verificaCheckBox() == false) {
+        document.querySelector("#popup").classList.add("popup");
+        return 
     }
 
     let enviar = criarJSON(form);
+    document.querySelector("#popup").classList.add("popup");
     console.log(enviar);
 
 
+
 });
-
-
-function validaForm(paciente) {
-
-    var erros = [];
-
-    if (paciente.nome.length == 0) {
-        erros.push("O nome não pode ser em branco");
-    }
-
-    if (paciente.gordura.length == 0) {
-        erros.push("A gordura não pode ser em branco");
-    }
-
-    if (paciente.peso.length == 0) {
-        erros.push("O peso não pode ser em branco");
-    }
-
-    if (paciente.altura.length == 0) {
-        erros.push("A altura não pode ser em branco");
-    }
-
-    if (!validaPeso(paciente.peso)) {
-        erros.push("Peso é inválido");
-    }
-
-    if (!validaAltura(paciente.altura)) {
-        erros.push("Altura é inválida");
-    }
-
-    return erros;
-}
-
 
 function criarJSON(form) {
 
