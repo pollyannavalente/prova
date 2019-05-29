@@ -165,6 +165,7 @@ footer h2{
     background-size: 25% 100%;
     position: relative;
 }
+
 .rodape-links{
     font-size: 0.80em;
     
@@ -303,5 +304,15 @@ body {
 }
 
 
-
+html{
+    scroll-behavior: smooth;    
+}
     
+
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html   {
+		scroll-behavior: auto;
+	}
+}
