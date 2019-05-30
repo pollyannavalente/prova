@@ -43,9 +43,8 @@ main p {
     text-align: center;
    /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
     text-decoration: none;
-  /*  transition: .5s;*/
-}
 
+}
 
 .trabalhos {
     background-color: #2f3783;
@@ -58,6 +57,7 @@ main p {
 .trabalhos img {
     width: 100%;
     display: block;
+
      border: .1em solid #000;
     
    /* position: static;*/
@@ -99,11 +99,14 @@ main p {
    
 }
 
+
 .trabalhos h2 {
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     color: #FFF;
     text-align: center;
+
     text-shadow: 2px 2px #000;
+
 }
 .secao-inicial h2 {
     font-size: 3em;
@@ -131,6 +134,7 @@ main p {
     text-align: center;
    /* box-shadow: 0 0 1em black, inset 0 0 0.5em white;*/
     text-decoration: none;
+
    /* transition: .5s;*/
 }
 
@@ -329,3 +333,4 @@ html{
       position: relative;
     }
 }
+
