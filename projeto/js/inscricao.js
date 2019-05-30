@@ -197,19 +197,24 @@ function criarLink(dado, classe, ref) {
 
 function criarJSON(form) {
 
+    let cont = 0;
     let interesse = [];
     let disponibilidade = "";
     if (ckOutro.checked) {
-        interesse[0] = txtOutro.value
+        interesse[cont] = txtOutro.value
+        cont++;
     }
     if (ckMachine.checked) {
-        interesse[1] = ckMachine.value
+        interesse[cont] = ckMachine.value
+        cont++;
     }
     if (ckBig.checked) {
-        interesse[2] = ckBig.value
+        interesse[cont] = ckBig.value
+        cont++;
     }
     if (ckIa.checked) {
-        interesse[3] = ckIa.value
+        interesse[cont] = ckIa.value
+        cont++;
     }
 
     if (rbManha.checked) {
@@ -229,7 +234,7 @@ function criarJSON(form) {
         nome: form.nome.value,
         email: form.email.value,
         disponibilidade: disponibilidade,
-        interesse: [interesse],
+        interesse: interesse,
         mensagem: form.mensagem.value
     }
 
