@@ -53,3 +53,23 @@ footer h2{
     
 }
 
+.box-helper {
+    text-align: center;
+    background-color: #2f3783;
+    color: #FFF;
+    padding: 2rem;
+    /*border-bottom: .5rem solid #000;*/
+    transform-style: preserve-3d;
+    float: left;
+    font-family:"OCR A Std", monospace;
+
+}
+.secundario {
+    text-transform: uppercase;
+    font-size: 2    em;
+    text-shadow: 2px 2px #000;
+    font-family:"OCR A Std", monospace;
+}
+body{
+background-color:     #F2FFFC;
+}

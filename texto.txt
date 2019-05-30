@@ -1,0 +1,3 @@
+git-helper V1.0
+esse é um projeto desenvolvido no programa de bolsas de 2019 para incentivar o aprendizado de git e exercitar JavaScript, CSS e HTML
+esse é um projeto desenvolvido no programa de bolsas de 2019 para incentivar o aprendizado de git e exercitar JavaScript, CSS e HTML
