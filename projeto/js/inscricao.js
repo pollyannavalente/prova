@@ -1,4 +1,5 @@
 const form = document.querySelector("#formulario");
+const main = document.querySelector("#main");
 const email = document.querySelector("#email");
 const nome = document.querySelector("#nome");
 const txtPer = document.querySelector("#perso");
@@ -14,45 +15,61 @@ const txtOutro = document.querySelector("#outro");
 const mensagem = document.querySelector("#mensagem");
 
 
+
 email.addEventListener("input", function () {
     chekEmail();
+
 });
 
 nome.addEventListener("input", function () {
     checkNome();
+
 });
 mensagem.addEventListener("input", function () {
     chekMensagem();
 });
 
 
-rbPerso.addEventListener("click", function () {
+rbPerso.addEventListener("change", function () {
     txtPer.removeAttribute("disabled");
     txtPer.focus();
+    liberaSubmit();
 
 });
-rbManha.addEventListener("click", function () {
+rbManha.addEventListener("change", function () {
     txtPer.setAttribute("disabled", true);
+    liberaSubmit();
 
 });
-rbTarde.addEventListener("click", function () {
+rbTarde.addEventListener("change", function () {
     txtPer.setAttribute("disabled", true);
-
+    liberaSubmit();
 });
-rbNoite.addEventListener("click", function () {
+rbNoite.addEventListener("change", function () {
     txtPer.setAttribute("disabled", true);
-
+    liberaSubmit();
 });
 
 
-ckOutro.addEventListener("click", function () {
+ckOutro.addEventListener("change", function () {
     if (txtOutro.hasAttribute("disabled")) {
         txtOutro.removeAttribute("disabled");
         txtOutro.focus();
     } else {
         txtOutro.setAttribute("disabled", true);
     }
+    liberaSubmit();
 });
+ckBig.addEventListener("change", function () {
+    liberaSubmit();
+});
+ckIa.addEventListener("change", function () {
+    liberaSubmit();
+});
+ckMachine.addEventListener("change", function () {
+    liberaSubmit();
+});
+
 
 
 
@@ -75,6 +92,8 @@ function chekMensagem() {
     if (mensagem.value.length > 140) {
         mensagem.classList.remove("erro-form")
         mensagem.classList.add("aceito-form");
+        liberaSubmit();
+
     } else {
         mensagem.classList.add("erro-form")
         mensagem.classList.remove("aceito-form");
@@ -88,6 +107,7 @@ function chekEmail() {
     event.preventDefault();
     let confereEmail = validaEmail(email.value);
     if (confereEmail) {
+
         email.classList.add("aceito-form");
     } else {
         email.classList.add("erro-form");
@@ -102,6 +122,7 @@ function checkNome() {
     if (nome.value == "" || confere == false || nome.value.length <= 2) {
         nome.classList.add("erro-form");
     } else {
+
         nome.classList.add("aceito-form");
     }
 }
@@ -126,43 +147,49 @@ function validaNome(nome) {
     }
 }
 
+function liberaSubmit() {
+    let bt = document.querySelector("#btsubmit");
+    checkNome();
+    chekEmail();
+    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form") || mensagem.value == "" ||
+        verificaRadio() == false || verificaCheckBox() == false) {
+        console.log("nao esta pronto")
+    } else {
+        console.log("pronto")
+        bt.removeAttribute("disabled");
+    }
+}
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    chekEmail();
-    checkNome();
-    chekMensagem();
-
-    if (nome.classList.contains("erro-form") || email.classList.contains("erro-form") || mensagem.classList.contains("erro-form") ||
-        verificaRadio() == false || verificaCheckBox() == false) {
-        return
-    }
     let enviar = criarJSON(form);
     insereDiv();
     console.log(enviar);
 });
 
-function insereDiv(){
+function insereDiv() {
     let main = document.querySelector("#main");
+    let footer = document.querySelector("#footer");
+    footer.classList.add("apos-popup");
     main.classList.add("apos-popup");
     let insc = "fazer outra inscrição";
     let cancelar = "sair";
-    let parag = "Inscrição enviada. Aguarde novos detalhes em seu e-mail " + email.value; 
+    let parag = "Inscrição enviada. Aguarde novos detalhes em seu e-mail " + email.value;
     let div = document.querySelector("#popup");
     div.classList.add("popup");
     div.appendChild(criarParagrafo(parag));
-    div.appendChild(criarLink(insc,"link-popup","inscricao.html"));
-    div.appendChild(criarLink(cancelar,"redir-popup","index.html"));
+    div.appendChild(criarLink(insc, "link-popup", "inscricao.html"));
+    div.appendChild(criarLink(cancelar, "redir-popup", "index.html"));
 }
-function criarParagrafo(dado){
+function criarParagrafo(dado) {
     let p = document.createElement("p");
     p.classList.add("paragrafo-popup");
     p.textContent = dado;
     return p;
 }
-function criarLink(dado,classe,ref) {
+function criarLink(dado, classe, ref) {
     let link = document.createElement("a")
-    link.setAttribute("href",ref);
+    link.setAttribute("href", ref);
     link.classList.add(classe);
     link.textContent = dado;
     return link;
@@ -170,55 +197,39 @@ function criarLink(dado,classe,ref) {
 
 function criarJSON(form) {
 
-    let inter = "";
-    let disp = "";
+    let interesse = [];
+    let disponibilidade = "";
     if (ckOutro.checked) {
-        if (inter == "") {
-            inter = txtOutro.value
-        } else {
-            inter = inter + "," + txtOutro.value
-        }
+        interesse[0] = txtOutro.value
     }
     if (ckMachine.checked) {
-        if (inter == "") {
-            inter = ckMachine.value
-        } else {
-            inter = inter + "," + ckMachine.value
-        }
+        interesse[1] = ckMachine.value
     }
     if (ckBig.checked) {
-        if (inter == "") {
-            inter = ckBig.value
-        } else {
-            inter = inter + "," + ckBig.value
-        }
+        interesse[2] = ckBig.value
     }
     if (ckIa.checked) {
-        if (inter == "") {
-            inter = ckIa.value
-        } else {
-            inter = inter + "," + ckIa.value
-        }
+        interesse[3] = ckIa.value
     }
 
     if (rbManha.checked) {
-        disp = rbManha.value
+        disponibilidade = rbManha.value
     }
-    if (rbTarde.checked) {
-        disp = rbTarde.value
+    else if (rbTarde.checked) {
+        disponibilidade = rbTarde.value
     }
-    if (rbNoite.checked) {
-        disp = rbNoite.value
+    else if (rbNoite.checked) {
+        disponibilidade = rbNoite.value
     }
-    if (rbPerso.checked) {
-        disp = txtPer.value
+    else if (rbPerso.checked) {
+        disponibilidade = txtPer.value
     }
 
     var inscrito = {
         nome: form.nome.value,
         email: form.email.value,
-        disponibilidade: disp,
-        interesse: inter,
+        disponibilidade: disponibilidade,
+        interesse: [interesse],
         mensagem: form.mensagem.value
     }
 

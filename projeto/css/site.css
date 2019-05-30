@@ -54,7 +54,7 @@ main p {
     color: #F2FFFC;
     padding: 1em;
     clear: both;
-    position: fixed;
+   
     bottom: 0;
     left: 0;
     width: 100%;
@@ -66,14 +66,16 @@ main p {
     background-color: #000; 
  
     background-size: 25% 100%;
-    position: relative;
 }
+
+
 
 .container {
     width: 80ch;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em 0;
+    
 }
 
 strong {
@@ -99,4 +101,17 @@ footer a{
 }
 footer h2{
     font-size: 1.5em;
+}
+
+
+@media (min-height: 400px) {
+    footer {
+      position: absolute;
+    }
+}
+
+@media (max-height: 980px) {
+    footer {
+      position: relative;
+    }
 }
