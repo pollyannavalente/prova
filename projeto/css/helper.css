@@ -1,56 +1,17 @@
-
-.principal {
-    text-transform: uppercase;
-    font-size: 3em;
-    text-shadow: 2px 2px #000;
-    font-family:"OCR A Std", monospace;
-}
-
-.titulo-principal {
-    text-align: right;
-    background-color: #2f3783;
-    color: #FFF;
-    padding: 3rem;
-    /*border-bottom: .5rem solid #000;*/
-    transform-style: preserve-3d;
+.terminal{
+    width: 560px;
+    height: 300px;
     position: relative;
+    float: right;
+    right: 8%;
+    padding: 20px;
 }
 
-
-.rodape-links{
-    font-size: 0.80em;
-    
-}
-
-footer a{
-    color: #686868;
-}
-footer h2{
-    font-size: 1.5em;
-}
-
-.rodape-pagina {
-    color: #F2FFFC;
-    padding: 1em;
-    clear: both;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.ajuste-terminal{
     width: 100%;
- 
-    
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    text-shadow: 1px 1px black;
-    background-color: #000; 
- 
-    background-size: 25% 100%;
-    position: relative;
-}
-
-.rodape-links{
-    font-size: 0.80em;
-    
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .box-helper {
@@ -58,11 +19,13 @@ footer h2{
     background-color: #2f3783;
     color: #FFF;
     padding: 2rem;
-    /*border-bottom: .5rem solid #000;*/
     transform-style: preserve-3d;
-    float: left;
     font-family:"OCR A Std", monospace;
     position: absolute;
+    float: left;
+    left: 0;
+    bottom: 100%;
+
 
 }
 .secundario {
@@ -71,6 +34,18 @@ footer h2{
     text-shadow: 2px 2px #000;
     font-family:"OCR A Std", monospace;
 }
-body{
-background-color:     #F2FFFC;
+.titulo-principal{
+    text-align: right;
+    padding-right: 167px;
+}
+
+main{
+    height: 39rem;
+}
+
+
+@media (max-height: 980px) {
+    footer {
+      position: absolute;
+    }
 }
